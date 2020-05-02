@@ -1,5 +1,5 @@
 // Widgets
-import Editor from 'esri/widgets/Editor';
+import Editor from './widgets/Editor';
 
 import esri = __esri;
 
