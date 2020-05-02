@@ -1,33 +1,7 @@
-import FeatureLayer from 'esri/layers/FeatureLayer';
-import TileLayer from 'esri/layers/TileLayer';
-import VectorTileLayer from 'esri/layers/VectorTileLayer';
-import ArcGISMap from 'esri/Map';
+import WebMap from 'esri/WebMap';
 
-export const featureLayer = new FeatureLayer({
+export const map = new WebMap({
   portalItem: {
-    id: 'b234a118ab6b4c91908a1cf677941702',
+    id: '6c5d657f1cb04a5eb78a450e3c699c2a',
   },
-  outFields: ['NAME', 'STATE_NAME', 'VACANT', 'HSE_UNITS'],
-  title: 'U.S. counties',
-  opacity: 0.8,
-});
-
-export const map = new ArcGISMap({
-  basemap: {
-    baseLayers: [
-      new TileLayer({
-        portalItem: {
-          // world hillshade
-          id: '1b243539f4514b6ba35e7d995890db1d',
-        },
-      }),
-      new VectorTileLayer({
-        portalItem: {
-          // topographic
-          id: '7dc6cea0b1764a1f9af2e679f642f0f5',
-        },
-      }),
-    ],
-  },
-  layers: [featureLayer],
 });

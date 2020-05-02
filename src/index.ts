@@ -1,5 +1,5 @@
 // Map data
-import { featureLayer, map } from './data/app';
+import { map } from './data/app';
 
 // MapView
 import MapView from 'esri/views/MapView';
@@ -13,10 +13,6 @@ import { initWidgets } from './widgets';
 const view = new MapView({
   container: 'viewDiv',
   map,
-});
-
-featureLayer.when(() => {
-  view.goTo(featureLayer.fullExtent);
 });
 
 view.when(initWidgets);
